@@ -1,6 +1,7 @@
 .env
 .DS_Store
 speech.wav
+output.wav
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
