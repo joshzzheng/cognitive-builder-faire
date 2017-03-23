@@ -14,7 +14,7 @@ def get_text_sentiment(text):
   return result['docSentiment']['type'], result['docSentiment']['score']
 
 def main():
-  text = "I love galvanize"
+  text = "I hate galvanize"
   
   sentiment, score = get_text_sentiment(text)
   print(sentiment, score)  
