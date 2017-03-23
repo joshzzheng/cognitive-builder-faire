@@ -1,2 +1,2 @@
 # cognitive-builder-faire
-Python code snippets for using Watson APIs
+Python and NodeJS code snippets for using Watson APIs
