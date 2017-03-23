@@ -31,7 +31,7 @@ lon = r.json()['location']['longitude'][0]
 ################################################################################
 # Get 7 day forcast from latude and longitude coordinates
 ################################################################################
-payload = {'units':'m'}
+payload = {'units':'e'}
 r = requests.get('https://' + 
   USERNAME + ':' + PASSWORD + 
   '@twcservice.mybluemix.net/api/weather/v1/geocode/' + 
