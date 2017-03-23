@@ -2,6 +2,7 @@
 .DS_Store
 speech.wav
 output.wav
+config.js
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
