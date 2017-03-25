@@ -3,6 +3,7 @@
 speech.wav
 output.wav
 config.js
+node_modules/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
