@@ -18,9 +18,9 @@ PASSWORD = os.environ.get("WEATHER_PASSWORD")
 address = input("Please enter your address: ")
 payload = {'query': address, 'locationType': 'address', 'language': 'en-US'}
 r = requests.get(
-  'https://' + 
-  USERNAME + ':' + PASSWORD + 
-  '@twcservice.mybluemix.net/api/weather/v3/location/search', 
+  'https://' +
+  USERNAME + ':' + PASSWORD +
+  '@twcservice.mybluemix.net/api/weather/v3/location/search',
   params=payload)
 
 location = r.json()['location']['address'][0]
@@ -32,10 +32,10 @@ lon = r.json()['location']['longitude'][0]
 # Get 7 day forcast from latude and longitude coordinates
 ################################################################################
 payload = {'units':'e'}
-r = requests.get('https://' + 
-  USERNAME + ':' + PASSWORD + 
-  '@twcservice.mybluemix.net/api/weather/v1/geocode/' + 
-  str(lat) + '/' + str(lon) + 
+r = requests.get('https://' +
+  USERNAME + ':' + PASSWORD +
+  '@twcservice.mybluemix.net/api/weather/v1/geocode/' +
+  str(lat) + '/' + str(lon) +
   '/forecast/daily/7day.json',
    params=payload)
 
@@ -52,9 +52,9 @@ for thing in r.json()['forecasts']:
 ################################################################################
 payload = {'hours': 23}
 r = requests.get(
-  'https://' + USERNAME + ':' + PASSWORD + 
-  '@twcservice.mybluemix.net/api/weather/v1/geocode/' + 
-  str(lat) + '/' + str(lon) + '/observations/timeseries.json', 
+  'https://' + USERNAME + ':' + PASSWORD +
+  '@twcservice.mybluemix.net/api/weather/v1/geocode/' +
+  str(lat) + '/' + str(lon) + '/observations/timeseries.json',
   params=payload)
 
 min_temp = sys.maxsize
